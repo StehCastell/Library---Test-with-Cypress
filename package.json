@@ -1,0 +1,37 @@
+{
+  "name": "library---test-with-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cy:run:edge": "cypress run --browser edge",
+    "cy:run:headed": "cypress run --headed",
+    "test:login": "cypress run --spec 'cypress/features/login.feature'",
+    "test:register": "cypress run --spec 'cypress/features/register.feature'",
+    "test:all": "cypress run --spec 'cypress/features/**/*.feature'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StehCastell/Library---Test-with-Cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StehCastell/Library---Test-with-Cypress/issues"
+  },
+  "homepage": "https://github.com/StehCastell/Library---Test-with-Cypress#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.7",
+    "cypress": "^15.5.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/steps/**/*.{js,ts}"
+  }
+}
