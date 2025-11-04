@@ -98,12 +98,20 @@ This project follows best practices using:
 
 ## Features Covered
 
-- User Registration
-  - Successful registration with valid data
-  - Validation errors (empty fields, invalid email, weak password)
-  - Duplicate email detection
-  - Password strength validation (minimum 6 characters)
-  - Multiple user registrations
+### User Registration
+- Successful registration with valid data (using random generated data)
+- Validation errors (empty fields, invalid email, weak password)
+- Duplicate email detection with specific error message
+- Password strength validation (minimum 6 characters)
+- Multiple user registrations
+- Navigation to login page
+
+### User Login
+- Successful login with valid credentials (using environment variables)
+- Invalid email or password with specific error message
+- Empty field validations
+- Multiple login attempts with different invalid credentials
+- Navigation to register page
 
 ## Notes
 

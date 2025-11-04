@@ -16,14 +16,14 @@ Feature: User Login
     When I fill the login "email" field with "invalid@example.com"
     And I fill the login "password" field with "WrongPass123!"
     And I click the login button
-    Then I should see login validation errors
+    Then I should see a login error message "Email ou password incorretos"
     And I should remain on the login page
 
   Scenario: Login with invalid password
     When I fill the email field with existing user email for login
     And I fill the login "password" field with "WrongPassword123!"
     And I click the login button
-    Then I should see login validation errors
+    Then I should see a login error message "Email ou password incorretos"
     And I should remain on the login page
 
   Scenario: Login with empty email field

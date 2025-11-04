@@ -61,7 +61,8 @@ Feature: User Registration
     And I fill the email field with existing user email
     And I fill the password field with existing user password
     And I click the register button
-    Then I should see validation errors
+    Then I should see an error message "Este email já está cadastrado ou ocorreu um erro"
+    And I should remain on the register page
 
   Scenario: Navigate to login page from register page
     When I click on the login link
