@@ -1,7 +1,7 @@
 {
   "name": "library---test-with-cypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated testing project for the Library System using Cypress with Cucumber (BDD).",
   "main": "index.js",
   "scripts": {
     "test": "cypress run",

@@ -65,7 +65,7 @@ class LoginPage {
 
   verifyOnLoginPage() {
     cy.url().should("include", "/account/login");
-    cy.contains("Login").should("be.visible");
+    cy.contains("Welcome Back").should("be.visible");
   }
 }
 

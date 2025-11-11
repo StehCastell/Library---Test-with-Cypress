@@ -31,11 +31,24 @@ class RegisterPage {
 
   fillField(field, value) {
     const fieldLower = field.toLowerCase();
+    const valueLower = value.toLowerCase();
 
     if (fieldLower === "name" || fieldLower === "nome") {
-      this.fillName(value);
+      // Se o valor for "user" ou "random", gera nome aleatório
+      if (valueLower === "user" || valueLower === "random") {
+        const randomName = this.generateRandomName();
+        this.fillName(randomName);
+      } else {
+        this.fillName(value);
+      }
     } else if (fieldLower === "email" || fieldLower === "e-mail") {
-      this.fillEmail(value);
+      // Se o valor for "email" ou "random", gera email aleatório
+      if (valueLower === "email" || valueLower === "random") {
+        const randomEmail = this.generateRandomEmail();
+        this.fillEmail(randomEmail);
+      } else {
+        this.fillEmail(value);
+      }
     } else if (fieldLower === "password" || fieldLower === "senha") {
       this.fillPassword(value);
     }
@@ -87,7 +100,7 @@ class RegisterPage {
 
   verifyOnRegisterPage() {
     cy.url().should("include", "/account/register");
-    cy.contains("Register").should("be.visible");
+    cy.contains("Create Account").should("be.visible");
   }
 }
 

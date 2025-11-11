@@ -1,9 +1,14 @@
 export const LoginElements = {
   inputEmail: 'input[name="Email"]',
   inputPassword: 'input[name="Password"]',
-  btnLogin: 'input[type="submit"][value="Login"]',
-  linkRegister: 'a:contains("Don\'t have an account? Register")',
+  btnLogin: 'button.btn-auth-primary',
+  linkRegister: 'a.btn-auth-secondary',
+  passwordToggle: 'button.password-toggle',
+  themeToggle: 'button.auth-theme-toggle',
   msgSuccess: ':contains("successfully logged in"), :contains("Welcome")',
-  msgError: '.error-message, .alert-error, .text-danger, [class*="error"]',
-  validationSummary: '[asp-validation-summary], .validation-summary-errors',
+  msgError: '.auth-error, .validation-error, .error-list',
+  validationSummary: '.auth-error .error-list',
+  authCard: '.auth-card',
+  authHeader: '.auth-header',
+  authLogo: '.auth-logo',
 };
